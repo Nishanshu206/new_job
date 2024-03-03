@@ -15,8 +15,7 @@ import {errorMiddleware} from './middlewares/error.js'
 const app=express();
 dotenv.config({path: "./config/config.env"})
 app.use(cors({
-    // origin: [process.env.FRONTEND_URL],
-    origin: 'https://deployment-job.vercel.app',
+    origin: [process.env.FRONTEND_URL],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true
 }))
